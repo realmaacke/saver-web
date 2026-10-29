@@ -19,8 +19,8 @@ export default function Navbar() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const handleClick = (e) => {
-            if (profileRef.current && !profileRef.current.contains(e.target)) {
+        const handleClick = (e : MouseEvent) => {
+            if (profileRef.current && !profileRef.current.contains(e.target as Node)) {
                 setOpen(false);
             }
         };
@@ -42,24 +42,24 @@ export default function Navbar() {
             { loggedIn ? (
             
             <div className="navbar-section">
-                <button className="navbar-button">
+                <button className="navbar-button" onClick={() => navigate("/")}>
                    <Home size={16}/>Home
                 </button>
-                <button className="navbar-button"> <Telescope size={16}/> Explore</button>
+                <button className="navbar-button" onClick={() => navigate("/")}> <Telescope size={16}/> Explore</button>
                 <div className="navbar-search">
                     <form>
                         <input type="text" placeholder="Search..."/>
                     </form>
                 </div>
-                <button className="navbar-button"><Newspaper size={16} /> Feed</button>
+                <button className="navbar-button"><Newspaper size={16} onClick={() => navigate("/")} /> Feed</button>
 
-                <button className="navbar-button"><FolderGit2 size={16}/> Projects</button>
+                <button className="navbar-button"><FolderGit2 size={16} onClick={() => navigate("/project")}/> Projects</button>
             </div>
         
             ) : (
 
             <div className="navbar-section">
-                <button className="navbar-button">
+                <button className="navbar-button" onClick={() => navigate("/")}>
                    <Home size={16}/>Home
                 </button>
                 <div className="navbar-search">
@@ -67,7 +67,7 @@ export default function Navbar() {
                         <input type="text" placeholder="Search..."/>
                     </form>
                 </div>
-                <button className="navbar-button"> <Telescope size={16}/> Explore</button>
+                <button className="navbar-button" onClick={() => navigate("/")}> <Telescope size={16}/> Explore</button>
             </div>
 
             )}
@@ -82,9 +82,9 @@ export default function Navbar() {
 
                     { open && (
                         <div className="navbar-dropdown">
-                            <button className="navbar-dropdown-item"><UserPen size={16}/>Profile</button>
-                            <button className="navbar-dropdown-item"><CogIcon size={16}/> Settings</button>
-                            <button className="navbar-dropdown-item"><LogOut size={16}/> Sign out</button>
+                            <button className="navbar-dropdown-item"><UserPen size={16} onClick={() => navigate("/")} />Profile</button>
+                            <button className="navbar-dropdown-item"><CogIcon size={16} onClick={() => navigate("/")} /> Settings</button>
+                            <button className="navbar-dropdown-item"><LogOut size={16}  onClick={() => navigate("/")} /> Sign out</button>
                         </div>
                     )}
                 </div>

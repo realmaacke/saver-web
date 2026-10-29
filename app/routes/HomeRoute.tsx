@@ -1,12 +1,18 @@
 "use strict";
+import { useNavigate } from "react-router";
 import Navbar from "~/components/Navbar/Navbar";
 
 export default function HomeRoute() {
+    const navigate = useNavigate();
+
     return (
         <>
             <Navbar/>
 
-            <h1>Home</h1>
+            <button onClick={
+                () => navigate("/project/marcus/saver-cli/dev")}
+            >Project</button>
+            <button onClick={() => navigate("/profile")}>Profile</button>
         </>
     )
 }

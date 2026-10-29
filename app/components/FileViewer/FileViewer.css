@@ -1,0 +1,88 @@
+
+.project-viewer {
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+/* Markdown styling */
+
+
+/* Styling for Markdown container */
+.project-viewer h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3em;
+}
+
+.project-viewer h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3em;
+}
+
+.project-viewer h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.project-viewer p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.project-viewer ul, .project-viewer ol {
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.project-viewer li {
+    list-style-type: disc;
+    margin-top: 0.25em;
+}
+
+.project-viewer a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.project-viewer a:hover {
+    text-decoration: underline;
+}
+
+.project-viewer code {
+    background-color: rgba(110, 118, 129, 0.4);
+    padding: 0.2em 0.4em;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 85%;
+}
+
+.project-viewer pre {
+    background-color: #161b22;
+    padding: 16px;
+    border-radius: 6px;
+    overflow: auto;
+}
+
+.project-viewer pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.markdown-body {
+    background-color: #222430;
+}

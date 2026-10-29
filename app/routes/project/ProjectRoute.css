@@ -1,0 +1,162 @@
+body, html {
+    /* background-color: #333540; */
+}
+.Project-Wrapper {
+    background-color: #333540;
+    display: flex;
+    flex-direction: column;
+}
+
+.Project-header {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Project-header-logo {
+    display: block;
+    max-width: 75px;
+    max-height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.Project-header-text {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.Project-header-text > a:hover {
+    color: red;
+}
+
+.three-split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 20px;
+
+    max-height: 900px;
+}
+
+
+.project-viewer {
+    min-width: 750px;
+    min-height: 800px;
+
+    max-height: 800px;
+    
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: #222430;
+}
+
+.file-not-found p{
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.project-files {
+    min-width: 725px;
+    min-height: 800px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: #222430;
+}
+
+.project-files-header {
+    border-bottom: 1px solid #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-files-header h1 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 8px;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Spacing between icon and text */
+}
+
+.project-files-header-icon {
+    
+}
+
+.project-files-header h1:hover {
+    color: red
+}
+
+.project-files-item {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 4px;
+    padding-left: 6px;
+
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.project-files-item p:last-child {
+    justify-self: end;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 200px;
+}
+
+.item-header a:hover {
+    color: red;
+}
+
+.project-settings {
+    min-width: 300px;
+    min-height: 800px;
+}
+
+.project-settings-actions {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #222430;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.project-settings-action-btn {
+    background-color: #333540;
+    padding: 9px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+.project-settings-action-btn:hover {
+    background-color: rgb(72, 76, 99);
+}
+
+.project-settings-action-btn.download {
+    background-color: green;
+}
+
+.project-settings-action-btn.download:hover {
+    background-color: rgb(0, 168, 0);
+}
